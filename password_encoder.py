@@ -1,3 +1,4 @@
+# Function for displaying user's options
 def print_menu():
     print("Menu")
     print(13 * '-')
@@ -5,6 +6,7 @@ def print_menu():
     print("2. Decode")
     print("3. Quit")
 
+# Function for encoding the user's password
 def encoder(password):
     new_password = []
     final_password = ''
@@ -17,6 +19,7 @@ def encoder(password):
         final_password += new_password[i]
     return final_password
 
+# Main function for printing old and new passwords or exiting program
 def main():
     print_menu()
     user_option = input('Please enter an option: ')
