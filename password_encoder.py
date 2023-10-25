@@ -2,7 +2,8 @@ def print_menu():
     print("Menu")
     print(13 * '-')
     print("1. Encode")
-    print("2. Quit")
+    print("2. Decode")
+    print("3. Quit")
 
 def encoder(password):
     new_password = []
@@ -19,11 +20,13 @@ def encoder(password):
 def main():
     print_menu()
     user_option = input('Please enter an option: ')
-    while user_option != "2":
+    while user_option != "3":
         if user_option == "1":
             user_password = input("Please enter your password to encode: ")
             encoded_password = encoder(user_password)
             print("Your password has been encoded and stored")
+        elif user_option == "2":
+            print(f"The encoded password is {encoded_password} , and the original password is {decoder(encoded_password)}.")
         print_menu()
         user_option = input('Please enter an option: ')
 
