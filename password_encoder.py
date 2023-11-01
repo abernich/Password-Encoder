@@ -19,6 +19,18 @@ def encoder(password):
         final_password += new_password[i]
     return final_password
 
+def decoder(password):
+    new_password = []
+    final_password = ''
+    for i in range(len(password)):
+        if int(password[i]) <= 2:
+            new_password.append((str((int(password[i]) - 3))[9:]))
+        else:
+            new_password.append(str((int(password[i]) - 3)))
+    for i in range(len(new_password)):
+        final_password += new_password[i]
+    return final_password
+
 # Main function for printing old and new passwords or exiting program
 def main():
     print_menu()
